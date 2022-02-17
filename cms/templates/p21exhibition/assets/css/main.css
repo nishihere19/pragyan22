@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+}
+
+/* *::-webkit-scrollbar {
+    width: 0px !important;
+    background: transparent;
+}
+
+* { 
+    overflow: -moz-scrollbars-none; 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+} */
+
+* {
+    scrollbar-color: #fff #9d9d95;
+    scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #ffffffa0;
+}
+
+*::-webkit-scrollbar {
+	width: 4px;
+	background-color: #ffffffa0;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #fff;
+}
+
+@font-face {
+    font-family: 'din';
+    src: url(../fonts/DIN\ Next\ W1G-font.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url(../fonts/Gotham-Bold.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url("../fonts/Gotham-Light.otf")format("opentype");
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+  scrollbar-width: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+html {
+    background: url(../images/bg.jpg) #000;
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    max-height: 30vh;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header img {
+    height: 30vh;
+    width: auto;
+}
+
+#main_div {
+    display: flex;
+    justify-content: center;
+    width: 78vw;
+    margin: 0 auto;
+    margin-top: 2vh;
+    font-family: 'din';
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+#content_div {
+    color: #fff;
+    font-size: 1.5em;
+    text-align: justify;
+    overflow-y: auto;
+    padding: 0 1.5vw 0 0;
+}
+
+.logo {
+    position: absolute;
+    top: 4vh;
+    right: 4vh;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+.contacts_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 6vh;
+    padding: 2vh;
+    margin-top: 4vh;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.item {
+    width: 33.3%;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.item img {
+    width: 100%;
+    object-fit: contain;
+    height: 200px;
+    padding: 10px;
+    background: #ffffff;
+}
+
+.sponsor {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.patronages {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.patronage_title {
+    margin-bottom: 15px;
+}
+
+.patronages .item {
+    width: 48%;
+    padding: 50px;
+}
+
+.patronages .item .item_child {
+    background: #ffffff22;
+    padding: 20px;
+}
+
+.row_title {
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+    font-size: 1.7em;
+    font-family: 'din';
+}
+
+@media screen and (max-width: 786px) {
+    .header {
+        font-size: 30px;
+        border: none;
+        margin-top: 80px;
+    }
+
+    .logo img {
+        width: auto;
+        height: 50px;
+    }
+
+    .header img {
+        height: 20vh;
+        width: auto;
+    }
+
+    #main_div {
+        flex-direction: column-reverse;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .contacts_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item {
+        width: 80%;
+    }
+
+    .patronages .item {
+        width: 70%;
+        padding: 20px;
+    }
+
+    .patronages .item .item_child {
+        padding: 10px;
+    }
+
+    .item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .row_title {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 578px) {
+    .header {
+        font-size: 30px;
+        border: none;
+        margin-top: 80px;
+    }
+
+    .logo img {
+        width: auto;
+        height: 50px;
+    }
+
+    .header img {
+        height: 20vh;
+        width: auto;
+    }
+
+    #content_div {
+        font-size: 1.2em;
+    }
+
+    html {
+        background: url(../images/bg-mobile.jpg) #000;
+    }
+}
+
+@media screen and (max-width: 432px) {
+    .header {
+        font-size: 30px;
+        border: none;
+        margin-top: 80px;
+    }
+
+    .logo img {
+        width: auto;
+        height: 50px;
+    }
+    
+    .header img {
+        height: 20vh;
+        width: auto;
+    }
+
+    #main_div {
+        width: 85vw;
+    }
+}

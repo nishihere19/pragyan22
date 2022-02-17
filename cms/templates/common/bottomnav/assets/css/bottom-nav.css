@@ -1,0 +1,93 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+body {
+  left: 0px;
+  top: 0px;
+  position: relative;
+
+  background: #ffffff;
+  background-image: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(67, 16, 174, 0) 34.9%,
+      rgba(25, 5, 51, 0.33) 100%
+    ),
+    url(../images/608197a36b99b8a252e1ec411f38c194.jpeg);
+  background-size: cover;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left:360px;
+  right: 0;
+  display: flex;
+}
+
+.menu-navigation-icons {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background: rgba(175, 177, 192, 0.36);
+  backdrop-filter: blur(64px);
+}
+.menu-navigation-icons a {
+  opacity: 0.92;
+  text-decoration: none;
+}
+
+.menu-navigation-icons a span {
+  position: relative;
+  top: 64px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: capitalize;
+
+  color: #ffffff;
+}
+
+/* Make this page responsive */
+
+.bottom-nav-left {
+  width: 339px;
+  height: 120px;
+  text-align: center;
+  background: #080318;
+}
+
+.bottom-nav-left a {
+  position: relative;
+  top: 50%;
+  text-decoration: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.zoom {
+  transition: transform 0.2s; /* Animation */
+  height: 120px;
+  width: 220px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(
+    1.48
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  background: #090909;
+  backdrop-filter: blur(64px);
+  background: linear-gradient(
+      292.01deg,
+      rgba(0, 0, 0, 0.39) -4.09%,
+      rgba(0, 0, 0, 0) 68.85%
+    ),
+    url(../images/608197a36b99b8a252e1ec411f38c194.jpeg) no-repeat;
+  background-size: cover;
+}

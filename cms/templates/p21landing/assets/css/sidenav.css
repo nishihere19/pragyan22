@@ -1,0 +1,158 @@
+.menu-icon {
+    height: 70px;
+    width: 110px;
+    position: absolute;
+    z-index: 3;
+    left: 4vh;
+    top: 4vh;
+    cursor: pointer;
+    background-image: url(../images/tab.png);
+    background-size:contain;
+    transition: all .3s ease-in;
+}
+.plus-icon {
+    height: 70px;
+    width: 70px;
+    z-index: 3;
+    cursor: pointer;
+    background-image: url(../images/plus.png);
+    background-size:contain;
+    transition: all .1s ease-in;
+}
+
+/* line 25, ../sass/burger.scss */
+.menu-icon__line {
+    height: 2px;
+    width: 30px;
+    display: block;
+    background-color: black;
+    margin-bottom: 4px;
+    transition: transform .2s ease, background-color .5s ease;
+}
+
+/* line 33, ../sass/burger.scss */
+.menu-icon__line-left {
+    width: 15px;
+}
+
+/* line 36, ../sass/burger.scss */
+.menu-icon__line-right {
+    width: 15px;
+    float: right;
+}
+
+body.nav-active .menu-icon__line {
+    background-color: #ffffff;
+    transform: translateX(0px) rotate(-45deg);
+}
+
+/* line 112, ../sass/burger.scss */
+body.nav-active .menu-icon__line-left {
+    transform: translateX(1px) rotate(45deg);
+}
+
+/* line 115, ../sass/burger.scss */
+body.nav-active .menu-icon__line-right {
+    transform: translateX(-2px) rotate(45deg);
+}
+body.nav-active .menu-icon {
+    transform: translateX(-43px) translateY(4px) rotate(90deg) scale(0.5);
+}
+body.menu-active .plus-icon{
+    transform: rotate(45deg);
+}
+body.menu-active .menu-items-container {
+    visibility: visible;
+}
+/* body.nav-active .social-media{
+    visibility: visible;
+} */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    max-width: 300px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    /* padding-top: 10vh; */
+    transition: 0.5s;
+    font-size: 0.9em;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 8px;
+    margin-left: 2vw;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: "Montserrat";
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+}
+
+#nav_logo {
+    text-align: center;
+    margin-left: 5vw;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+    transform: none;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #f1f1f1;
+    transform: scale(1.1);
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+body.nav-active #mySidenav {
+    width: 20vw;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 768px) {
+    body.nav-active #mySidenav {
+        width: 60vw;
+    }
+
+    .menu-icon {
+        width: 55px;
+        height: 35px;
+    }
+    .sidenav {
+        /* padding-top: 12vw; */
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+    .plus-icon {
+        height: 35px;
+        width: 35px;
+    }
+
+    body.nav-active .menu-icon {
+        transform: translateX(-30px) translateY(16px) rotate(90deg) scale(0.8);
+    }
+}

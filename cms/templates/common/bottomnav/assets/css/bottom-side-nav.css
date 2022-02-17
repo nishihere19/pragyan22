@@ -1,0 +1,108 @@
+/* The side navigation menu */
+
+.bottom {
+  position: fixed; /* Stay in place */
+  bottom: 0; /* Stay at the top */
+  left: 0;
+  display: flex;
+}
+
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  width: 360px; /* 0 width - change this with JavaScript */
+  height: 120px;
+  position: fixed; /* Stay in place */
+  bottom: 0; /* Stay at the top */
+  left: 0;
+  justify-content: space-evenly;
+  background-color: #151515; /* Black*/
+  /* overflow: hidden; /* Disable horizontal scroll */ 
+  /* align-items: center; */
+  transform: translateX(0);
+  transition: all .2s ease-in;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 40px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  color: #ffffff;
+  display: block;
+  display: none;
+  transition: all .3s ease-in;
+}
+
+.sidenav #hello {
+  padding: 50px 8px 50px 40px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  color: #ffffff;
+  /* margin-top: 50px; */
+  /* display: block; */
+  cursor: pointer;
+}
+
+#dropup-button.checked {
+  transform: rotate(-90deg);
+  transition: all 0.2s ease-in;
+}
+
+#dropup-button {
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in;
+}
+
+.overlay {
+    backdrop-filter: blur(2px);
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.sidenav.sidenav-open {
+  height: 80%;
+}
+
+.sidenav-open #hello {
+  padding: 8px 8px 40px 40px;
+}
+
+#content {
+  display: none;
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex: 1;
+}
+
+@media screen and (max-height: 600px) {
+  .sidenav {
+    height: 80px;
+  }
+  .sidenav.sidenav-open {
+    height: 100%;
+  }
+}
+
+@media (max-width: 780px) {
+  .sidenav.sidenav-open {
+    width: 100%;
+  }
+  /* body { */
+  /* } */
+  body {
+    background-color: black;
+  }
+  .content {
+    color: green;
+  }
+  #cur {
+    color: green;
+    display: none;
+  }
+}

@@ -1,0 +1,388 @@
+* {
+  box-sizing: border-box;
+}
+
+@-moz-document url-prefix() { /* Disable scrollbar Firefox */
+            html{
+              scrollbar-width: none;
+            }
+}
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url(../fonts/Gotham-Bold.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url(../fonts/Gotham-Light.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'din';
+    src: url(../fonts/DIN\ Next\ W1G-font.otf) format('truetype');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+  scrollbar-width: none;
+  overflow: auto;
+}
+
+html {
+    /* background: url(../images/bg.jpg) #000;
+  /* fallback */
+  background-color: #000;
+  background-repeat: repeat-x;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#23242e), to(#000));
+  background: -webkit-linear-gradient(top, #23242e, #000);
+  background: -moz-linear-gradient(top, #23242e, #000);
+  background: -ms-linear-gradient(top, #23242e, #000);
+  background: -o-linear-gradient(top, #23242e, #000);
+}
+
+fieldset {
+    border: 0;
+    height: 300px;
+    overflow: auto;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+fieldset legend {
+    font-family: 'GothamLight';
+    padding-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+fieldset legend img {
+    display: none;
+}
+
+fieldset ol li {
+    padding-bottom: 5px;
+}
+
+fieldset ol li a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'GothamLight';
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2.9em;
+    margin-top: 7vh;
+    height: 14vh;
+    text-align: center;
+    font-family: 'GothamBold';
+}
+
+#main_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+}
+
+#left_div {
+    display: flex;
+    justify-content: center;
+    width: 48vw;
+    /* height: 100vh; */
+    /* position: relative; */
+    /* border: 2px solid #000; */
+}
+
+#logo {
+    position: absolute;
+    top: 50%;
+    /* left: 50%; */
+    transform: translateY(-50%);
+    padding: 4vw;
+    width: inherit;
+    /* width: 38vw; */
+}
+
+#vertical_line {
+    height: 78vh;
+    margin-top: 2vh;
+    border-left: 0.2vh solid #fff;
+}
+
+#right_div {
+    width: 48vw;
+}
+
+#right_div #injection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 75vh;
+    width: 39vw;
+    margin: 0 auto;
+}
+
+#injection div {
+    overflow: auto;
+}
+
+#injection form, #injection div form {
+    font-family: 'GothamLight';
+    overflow: auto;
+}
+
+#injection form[name='user_reg_usrFrm'] {
+    margin-top: 4vh;
+}
+
+#injection form fieldset {
+    border: 0;
+    padding: 1em;
+    height: unset;
+}
+
+#injection form[name='user_profile_usrFrm'] fieldset legend{
+    display: none;
+}
+
+#injection form fieldset legend {
+    margin-bottom: 1em;
+    font-size: 2em;
+    width: 100%;
+}
+
+#injection form[name='user_reg_usrFrm'] fieldset legend {
+    margin-bottom: 0;
+}
+
+form fieldset table, form fieldset table tbody{
+  width:100%;
+  font-size: 1em;
+}
+
+#injection form[name='user_profile_usrFrm'] table tr:first-child td:first-child img{
+    margin-bottom: 10px;
+}
+
+#injection form[name='user_reg_usrFrm'] table tr td:first-child, 
+#injection form[name='user_profile_usrFrm'] table tr td:first-child{
+    width: 45%;
+    margin-right: 3px;
+}
+
+form input {
+    margin-bottom: 1.3em;
+    font-size: 1.2em;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+form[name='user_reg_usrFrm'] input, form[name='user_profile_usrFrm'] input {
+    margin-bottom: 0.9em;
+    font-size: 1em;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+#injection form input[type="submit"] {
+    border: 0;
+    margin-top: 4vh;
+    background: #00000000;
+    color: #fff;
+    font-weight: inherit;
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+#injection form[name='user_profile_usrFrm'] input[type="submit"] {
+    font-size: 1.3em;
+}
+
+#injection form input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+#injection form[name='user_reg_usrFrm'] input[type='radio'], 
+#injection form[name='user_profile_usrFrm'] input[type='radio'] {
+    padding: 0;
+    width: auto;
+}
+
+#injection form[name='user_reg_usrFrm'] select, 
+#injection form[name='user_profile_usrFrm'] select {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 1.3em;
+    border-radius: 7px;
+    font-size: 1em;
+    padding: 2px;
+    background: #fff;
+}
+
+#injection form[name='user_reg_usrFrm'] textarea, #injection form[name='user_profile_usrFrm'] textarea{
+    border-radius: 10px;
+    font-size: 1em;
+    margin-bottom: 1.3em;
+}
+
+form[name='user_reg_usrFrm'] img[alt='CAPTCHA'] {
+    width: 100%;
+    border-radius: 4px;
+}
+
+#no_account {
+    display: block;
+    margin-top: 2vh;
+}
+
+#sign_up {
+    display: block;
+    margin: 1.6vh 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#injection form a {
+    color: #fff;
+    font-family: 'GothamLight';
+    text-decoration: none !important;
+}
+
+@media screen and (max-width: 786px) {
+    #main_div {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #left_div, #vertical_line {
+        display: none;
+    }
+
+    #right_div {
+        width: 100%;
+    }
+
+    #right_div #injection {
+        width: 60vw;
+        height: 100%;
+    }
+
+    #title {
+        width: 100%;
+        text-align: center;
+        line-height: 1.6;
+        margin-top: 9vh;
+        padding: 0.7vh;
+        height: 20vh;
+        font-size: 2.6em;
+    }
+
+    #injection form fieldset {
+        padding: 0;
+    }
+
+    #injection form fieldset legend {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    #injection form[name='user_passreset'] fieldset legend {
+        text-align: start;
+    }
+
+    #injection form[name='user_reg_usrFrm'] fieldset legend {
+        margin-bottom: 1em;
+    }
+
+    #injection form input {
+        font-size: 1em;    
+    }
+    #injection form input[type="submit"] {
+        width: auto;
+    }
+
+    #injection form[name='user_profile_usrFrm'] {
+        margin-top: 5vh;
+    }
+
+
+}
+
+@media screen and (max-width: 578px) {
+    #right_div #injection {
+        width: 75vw;
+    }
+
+    #title {
+        font-size: 2.2em;
+    }
+}
+
+@media screen and (max-width: 432px) {
+    #title {
+        font-size: 2em;
+    }
+
+    #main_div {
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+    }
+
+    #injection form[name='user_reg_usrFrm'],
+    #injection form[name='user_profile_usrFrm'] {
+        margin-top: 5vh;
+    }
+}
+
+*::-webkit-scrollbar {
+    width: 0px !important;
+    background: transparent;
+}
+
+* { 
+    overflow: -moz-scrollbars-none; 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*::-webkit-input-placeholder  {
+    color: rgb(54, 53, 53);
+    /* text-transform: uppercase; */
+    font-family: 'din';
+}
+
+*:-moz-placeholder { /* Firefox 18- */
+    color: rgb(54, 53, 53);
+    /* text-transform: uppercase; */
+    font-family: 'din'; 
+}
+
+*::-moz-placeholder {  /* Firefox 19+ */
+    color: rgb(54, 53, 53);
+    /* text-transform: uppercase; */
+    font-family: 'din';
+} 
+
+:-ms-input-placeholder {  
+    color: rgb(54, 53, 53);
+    /* text-transform: uppercase; */
+    font-family: 'din';  
+}
+
+
+
+
