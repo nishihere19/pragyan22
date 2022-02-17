@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.details-wrapper{
+    width: 100%;
+    min-height: 100vh;
+    background: url(../images/dalal.jpeg); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: relative;
+    display: flex;
+}
+
+.details-wrapper *{
+    color:white;
+}
+
+.details-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10em;
+    margin-left: 6em;
+    width: 33%;
+    margin-bottom: 10em;
+}
+
+.details-heading-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.details-cluster{
+    padding-left: 4px;
+}
+
+.details-heading-start{
+    font-size: 6em;
+    font-weight: 300;
+    line-height: 1em;
+}
+
+.details-heading-end{
+    line-height: 1em;
+    font-size: 6em;
+    font-weight: 700;
+}
+
+.details-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.details-body-item{
+    margin: 0.5em 0;
+}
+
+.details-body-item-head{
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-bottom: 0.75em;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.details-body-item-content{
+    font-weight: 300;
+}
+
+.details-body-item-head i{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.hidden{
+    height: 0;
+    overflow: hidden;
+}
+
+/* add a media query for each of this */
+/* sm: '320px',
+  md: '768px',
+  lg: '960px',
+  xl: '1200px', */
+@media only screen and (max-width: 320px) {
+    .details-container{
+        width: 70%;
+        margin-left: 2em;
+        margin-top: 8em;
+    }
+    .details-heading-start{
+        font-size: 5em;
+    }
+    .details-heading-end{
+        font-size: 5em;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+    .details-container{
+        width: 70%;
+        margin-left: 2em;
+        margin-top: 8em;
+    }
+    .details-heading-start{
+        font-size: 5em;
+    }
+    .details-heading-end{
+        font-size: 5em;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 959px) {
+    .details-container{
+        width: 75%;
+        margin-left: 2em;
+    }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .details-container{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .details-container{
+        width: 33%;
+    }
+}
