@@ -16,9 +16,12 @@ body {
 }
 
 .navbar {
+  backdrop-filter: blur(2px);
   position: fixed;
+  /* float: left; */
   bottom: 0;
-  left:360px;
+  /* clear: both; */
+  left: 0px;
   right: 0;
   display: flex;
 }
@@ -77,10 +80,15 @@ body {
   margin: 0 auto;
 }
 
+.zoom:hover .sidenav {
+  width: 300;
+}
+
 .zoom:hover {
   transform: scale(
     1.48
   ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  z-index: 100 !important;
   background: #090909;
   backdrop-filter: blur(64px);
   background: linear-gradient(
@@ -88,6 +96,6 @@ body {
       rgba(0, 0, 0, 0.39) -4.09%,
       rgba(0, 0, 0, 0) 68.85%
     ),
-    url(../images/608197a36b99b8a252e1ec411f38c194.jpeg) no-repeat;
+    url("./608197a36b99b8a252e1ec411f38c194.jpeg") no-repeat;
   background-size: cover;
 }
