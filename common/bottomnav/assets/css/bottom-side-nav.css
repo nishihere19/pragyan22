@@ -1,0 +1,147 @@
+/* The side navigation menu */
+
+.bottom {
+  position: fixed; /* Stay in place */
+  bottom: 0; /* Stay at the top */
+  left: 0;
+  display: flex;
+}
+
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  width: 360px; /* 0 width - change this with JavaScript */
+  height: 120px;
+  /* position: fixed; /* Stay in place */ 
+  bottom: 0; /* Stay at the top */
+  left: 0;
+  justify-content: space-evenly;
+  background-color: #151515; /* Black*/
+  /* overflow: hidden; /* Disable horizontal scroll */ 
+  /* align-items: center; */
+  /* transform: translateX(0); */
+  transition: all .2s ease-in;
+}
+
+#content a {
+  /* width: 120px; */
+  padding: 8px 8px 8px 40px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  visibility: visible;
+  color: #ffffff;
+  display: block;
+  transition: all .2s ease-in;
+}
+
+.sidenav #hello {
+  padding: 50px 8px 50px 40px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  color: #ffffff;
+  transition: all 0.2s ease-in;
+  transition: all .2s ease-in;
+  cursor: pointer;
+}
+
+#dropup-button.checked {
+  transform: rotate(-90deg);
+  transition: all 0.2s ease-in;
+}
+
+#dropup-button {
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in;
+}
+
+.overlay {
+    backdrop-filter: blur(2px);
+    position:absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+body {
+  margin: 0;
+}
+
+/* .sidenav-open #hello { */
+/*   padding: 8px 8px 40px 40px; */
+/* } */
+
+#content {
+  display: none;
+  visibility: visible;
+  /* overflow-y:scroll; */
+  min-width: 100%;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 120px;
+  z-index: 1;
+  background-color: #151515; /* Black*/
+  flex-direction: column;
+  height: 520px;
+  /* transform: translateX(0); */
+  transition: all .2s linear;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.total {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: end;
+  /* transform: translateX(0); */
+  transition: all .2s ease-in;
+}
+
+@media (max-width: 780px) {
+  .sidenav.sidenav-open {
+    width: 100%;
+  }
+  #cur {
+    visibility: hidden;
+    width: 0px;
+    display: inline-block;
+  }
+
+  #dropup-button {
+    padding-right: 10px;
+  }
+
+  .total.sidenav-open #dropup-button {
+    padding: auto;
+  }
+
+  .total.sidenav-open #cur {
+    visibility: visible;
+    width: auto;
+  }
+
+  
+  .menu-navigation-icons.sidenav-open {
+    z-index: -1;
+  }
+  #content {
+    height: calc(100vh - 120px);
+  }
+  .sidenav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 14.9vw;
+    height: 5.6vh !important;
+  }
+  .total.sidenav-open .sidenav {
+    width: 360px;
+  }
+}
