@@ -1,7 +1,29 @@
-// get all with class of material-icons
-let headings = document.querySelectorAll(".details-body-item-head");
+let eventData = {}
+let currentHeader = ""
+const heading_regex = /^[a-zA-Z0-9/s]+:$/
 
-// addEventListener to all icons
+for(const node of document.querySelectorAll("#injection p")) {
+  const val = node.innerHTML.trim();
+  if(val.match(heading_regex)) {
+    const heading = val.slice(0, -1);
+    eventData[heading] = [];
+    if(currentHeader != "")
+      eventData[currentHeader] = eventData[currentHeader].join("\n");
+    currentHeader = heading;
+  } else {
+    if(currentHeader != "") {
+      eventData[currentHeader].push(val)
+    }
+  }
+}
+
+eventData[currentHeader] = eventData[currentHeader].join("\n");
+
+document.querySelector("body").innerHTML += `<div id='current' style="display:none">${eventData.cluster}</div>`
+
+
+const headings = document.querySelectorAll(".details-body-item-head");
+
 headings.forEach((heading) => {
   heading.addEventListener("click", (e) => {
     let body = e.target.nextElementSibling;
@@ -19,28 +41,24 @@ headings.forEach((heading) => {
   });
 });
 
-// We can get this json from the a hidden div which will be getting the content from cms
-const eventData = {
-  cluster: "Manigma's",
-  startName: "Dalal",
-  endName: "Street",
-  description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis sed autem id asperiores voluptatem, enim cumque at libero odio iste molestias, quae quis pariatur perferendis suscipit aliquid illo facere reiciendis?`,
-  format: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laudantium ex, est, saepe placeat soluta magnam nesciunt similique eveniet explicabo tenetur repudiandae animi illum ab? Fuga recusandae in nobis ipsa deleniti aliquam iste! Quae, voluptatem? Reiciendis vel doloribus id qui.`,
-  rules: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem asperiores aliquid tempora cumque quaerat. Harum qui, fugiat perspiciatis soluta quos architecto aperiam at debitis esse aspernatur necessitatibus quod quaerat cupiditate aliquid blanditiis maxime error! Sunt inventore dolor ut repudiandae perspiciatis!`,
-  resources: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores fugit aliquam laborum nemo modi quae, veritatis error numquam earum nihil commodi, saepe qui natus harum esse dolorum cupiditate veniam consequuntur quam rerum voluptatibus ab corrupti? Dolore obcaecati sed corrupti ipsum.`,
-};
-
 const loadEventData = () => {
   let name = eventData.startName + " " + eventData.endName;
   document.querySelector(
     ".details-wrapper"
   ).style.background = `url(assets/images/events/${name}.jpeg)`;
   for (let key in eventData) {
-    let body = document.getElementById(`${key}-content`);
-    body.innerHTML = eventData[key];
+    const event = document.getElementById(`${key}-content`);
+    if(event)
+      event.innerHTML = eventData[key];
   }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadEventData();
-});
+const setBackground = () => {
+  const path = document.querySelector("#path").innerHTML.trim();
+  console.log(path);
+  document.querySelector(".details-wrapper").style.background = `url(${path}/assets/images/${eventData.image})`;
+  console.log("set");
+}
+
+loadEventData();
+setBackground();

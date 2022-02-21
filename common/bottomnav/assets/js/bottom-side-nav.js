@@ -9,7 +9,7 @@ const events = [
 	"MANIGMA",
 ];
 
-const current = "MANIGMA";
+const current = document.getElementById("current").innerHTML.toUpperCase();
 const sidenav = document.querySelector(".sidenav");
 const content = document.querySelector("#content");
 

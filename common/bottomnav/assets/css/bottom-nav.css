@@ -6,12 +6,12 @@ body {
   position: relative;
 
   background: #ffffff;
-  background-image: radial-gradient(
-      50% 50% at 50% 50%,
-      rgba(67, 16, 174, 0) 34.9%,
-      rgba(25, 5, 51, 0.33) 100%
-    ),
-    url(../images/608197a36b99b8a252e1ec411f38c194.jpeg);
+  /* background-image: radial-gradient( */
+  /*     50% 50% at 50% 50%, */
+  /*     rgba(67, 16, 174, 0) 34.9%, */
+  /*     rgba(25, 5, 51, 0.33) 100% */
+  /*   ), */
+  /*   url(../images/608197a36b99b8a252e1ec411f38c194.jpeg); */
   background-size: cover;
 }
 

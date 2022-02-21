@@ -11,6 +11,9 @@ if(!defined('__PRAGYAN_CMS'))
 <html lang="en">
 
 <head>
+    <script src="<?php echo $TEMPLATEBROWSERPATH; ?>/assets/scripts/main.js" defer>
+       
+    </script>
     <title>
         <?php
             $params=[];
@@ -28,13 +31,13 @@ if(!defined('__PRAGYAN_CMS'))
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJH35RCT1D"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-SJH35RCT1D');
-    </script>
+     </script>
+     <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-SJH35RCT1D');
+     </script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
@@ -104,6 +107,7 @@ if(!defined('__PRAGYAN_CMS'))
     </div>
     <div class="side-nav">
         <?php 
+            // echo $TEMPLATECODEPATH;
             $string = explode('/', $TEMPLATECODEPATH);
             array_pop($string);
             $string = implode('/', $string);
@@ -111,7 +115,20 @@ if(!defined('__PRAGYAN_CMS'))
             include $nav;
         ?>
     </div>
-    <script src="<?php echo $TEMPLATEBROWSERPATH; ?>/assets/scripts/main.js"></script>
+    <div id="injection">
+        <?php
+            $string = explode('/', $TEMPLATECODEPATH);
+            array_pop($string);
+            $string = implode('/', $string);
+            $responseHelpers = $string."/common/response/index.php";
+            require_once $responseHelpers;
+        ?>
+    </div>
+    <div id="path">
+    <?php 
+        echo $TEMPLATEBROWSERPATH;
+     ?>
+    </div>
 </body>
 
 </html>

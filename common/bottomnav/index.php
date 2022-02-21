@@ -25,21 +25,21 @@
             </nav>
     </div>';
 
-        if (isset($_SESSION["userId"])) {
-            $logout =  <<<LOGIN
-                        <a href="./+profile">Profile</a> 
-                        <a href="./+logout">Logout</a>     
-LOGIN;
-            echo $logout;
-        } else {
-            $login_str =  <<<LOGIN
-                        <a href="./+login">Log in / Sign up</a>
-LOGIN;
-            echo $login_str;
-        }
+//         if (isset($_SESSION["userId"])) {
+//             $logout =  <<<LOGIN
+//                         <a href="./+profile">Profile</a>
+//                         <a href="./+logout">Logout</a>
+// LOGIN;
+//             echo $logout;
+//         } else {
+//             $login_str =  <<<LOGIN
+//                         <a href="./+login">Log in / Sign up</a>
+// LOGIN;
+//             echo $login_str;
+        // }
             
     echo '
         </div>
-        <script src="'.$string.'/common/bottomnav/assets/js/bottom-side-nav.js"></script>'; 
+        <script src="'.$string.'/common/bottomnav/assets/js/bottom-side-nav.js" defer></script>';
 ?>
 
