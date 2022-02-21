@@ -141,10 +141,16 @@ body {
 		width: 75%;
 		margin-left: 2em;
 	}
+	.details-body {
+		width: 75%;
+	}
 }
 
 @media only screen and (min-width: 960px) and (max-width: 1199px) {
 	.details-container {
+		width: 50%;
+	}
+	.details-body {
 		width: 50%;
 	}
 }
@@ -152,5 +158,37 @@ body {
 @media screen and (min-width: 1200px) {
 	.details-container {
 		width: 33%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.details-container {
+		width: 50%;
+		margin-left: 2em;
+	}
+	.details-body-wrapper {
+		height: 40vh;
+		max-height: 40vh;
+		background: rgba(20, 20, 20, 0.5);
+		border-radius: 12px;
+		padding: 2rem 1.5rem;
+	}
+	.details-body {
+		width: 65%;
+	}
+
+	.details-body-item-head {
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 27px;
+	}
+	.details-body-item-content {
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 21px;
 	}
 }

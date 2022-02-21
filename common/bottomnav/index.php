@@ -14,13 +14,13 @@
                 <div class="sidenav" data-img="'.$string.'/common/bottomnav/assets/images/right.png"></div>
                 <div id="content"></div>
             </div>
-            <div class="menu-items">
-                <a href="#" class="zoom"><span>Dalal Street</span></a>
-                <a href="#" ><span>Beer Factory</span></a>
-                <a href="#" ><span>The Ultimate Manager</span></a>
-                <a href="#" ><span>PPL</span></a>
-                <a href="#" ><span>Marketing Hub</span></a>
-            </div>
+                <div class="menu-items menu-navigation-icons">
+                    <a href="#" class="zoom"><span>Dalal Street</span></a>
+                    <a href="#" ><span>Beer Factory</span></a>
+                    <a href="#" ><span>The Ultimate Manager</span></a>
+                    <a href="#" ><span>PPL</span></a>
+                    <a href="#" ><span>Marketing Hub</span></a>
+                </div>
     </div>';
 
 //         if (isset($_SESSION["userId"])) {
