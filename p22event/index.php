@@ -66,37 +66,39 @@ if(!defined('__PRAGYAN_CMS'))
                 <div class="details-heading-start" id="startName-content">Dalal</div>
                 <div class="details-heading-end" id="endName-content">Street</div>
             </div>
-            <div class="details-body">
-                <div class="details-body-item">
-                    <div class="details-body-item-head">
-                        Description
-                        <i class="material-icons">keyboard_arrow_down</i>
+            <div class="details-body-wrapper">
+                <div class="details-body">
+                    <div class="details-body-item">
+                        <div class="details-body-item-head">
+                            Description
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </div>
+                        <div class="details-body-item-content" id="description-content">
+                        </div>
                     </div>
-                    <div class="details-body-item-content" id="description-content">
+                    <div class="details-body-item">
+                        <div class="details-body-item-head">
+                            Format
+                            <i class="material-icons">keyboard_arrow_right</i>
+                        </div>
+                        <div class="details-body-item-content hidden" id="format-content">
+                        </div>
                     </div>
-                </div>
-                <div class="details-body-item">
-                    <div class="details-body-item-head">
-                        Format
-                        <i class="material-icons">keyboard_arrow_right</i>
+                    <div class="details-body-item">
+                        <div class="details-body-item-head">
+                            Rules
+                            <i class="material-icons">keyboard_arrow_right</i>
+                        </div>
+                        <div class="details-body-item-content hidden" id="rules-content">
+                        </div>
                     </div>
-                    <div class="details-body-item-content hidden" id="format-content">
-                    </div>
-                </div>
-                <div class="details-body-item">
-                    <div class="details-body-item-head">
-                        Rules
-                        <i class="material-icons">keyboard_arrow_right</i>
-                    </div>
-                    <div class="details-body-item-content hidden" id="rules-content">
-                    </div>
-                </div>
-                <div class="details-body-item">
-                    <div class="details-body-item-head">
-                        Resources
-                        <i class="material-icons">keyboard_arrow_right</i>
-                    </div>
-                    <div class="details-body-item-content hidden" id="resources-content">
+                    <div class="details-body-item">
+                        <div class="details-body-item-head">
+                            Resources
+                            <i class="material-icons">keyboard_arrow_right</i>
+                        </div>
+                        <div class="details-body-item-content hidden" id="resources-content">
+                        </div>
                     </div>
                 </div>
             </div>
