@@ -14,29 +14,27 @@
                 <div class="sidenav" data-img="'.$string.'/common/bottomnav/assets/images/right.png"></div>
                 <div id="content"></div>
             </div>
-            <nav class="menu-navigation-icons">
+            <div class="menu-items">
                 <a href="#" class="zoom"><span>Dalal Street</span></a>
-                <div class="menu-item">
-                    <a href="#" ><span>Beer Factory</span></a>
-                    <a href="#" ><span>The Ultimate Manager</span></a>
-                    <a href="#" ><span>PPL</span></a>
-                    <a href="#" ><span>Marketing Hub</span></a>
-                </div>
-            </nav>
+                <a href="#" ><span>Beer Factory</span></a>
+                <a href="#" ><span>The Ultimate Manager</span></a>
+                <a href="#" ><span>PPL</span></a>
+                <a href="#" ><span>Marketing Hub</span></a>
+            </div>
     </div>';
 
-        if (isset($_SESSION["userId"])) {
-            $logout =  <<<LOGIN
-                        <a href="./+profile">Profile</a> 
-                        <a href="./+logout">Logout</a>     
-LOGIN;
-            echo $logout;
-        } else {
-            $login_str =  <<<LOGIN
-                        <a href="./+login">Log in / Sign up</a>
-LOGIN;
-            echo $login_str;
-        }
+//         if (isset($_SESSION["userId"])) {
+//             $logout =  <<<LOGIN
+//                         <a href="./+profile">Profile</a> 
+//                         <a href="./+logout">Logout</a>     
+// LOGIN;
+//             echo $logout;
+//         } else {
+//             $login_str =  <<<LOGIN
+//                         <a href="./+login">Log in / Sign up</a>
+// LOGIN;
+//             echo $login_str;
+//         }
             
     echo '
         </div>

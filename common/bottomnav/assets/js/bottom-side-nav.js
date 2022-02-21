@@ -1,3 +1,20 @@
+const eventMap = {
+	concreate: {
+		"plan it": "planIt.png",
+		"town race": "townTrace.png",
+	},
+	bytehoc: {
+		circuitx: "circuitrix.png",
+		"no contact": "noContact.png",
+	},
+	conception: {
+		"web wars": "webWars.png",
+		"code character": "codeCharacter.png",
+		"code venatic": "codeVenatic.png",
+		ctf: "ctf.png",
+	},
+};
+
 const events = [
 	"EWITTS",
 	"PHRONESIS",
