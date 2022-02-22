@@ -15,24 +15,67 @@ const eventMap = {
 	},
 };
 
-const events = [
-	"EWITTS",
-	"PHRONESIS",
-	"PANDORA'S BOX",
-	"ROBOREX",
-	"CONCEPTION",
-	"BYTEHOC",
-	"CONCREATE",
-	"MANIGMA",
+const clusters = [
+	{
+		name: "EWITTS",
+		url_name: "",
+	},
+	{
+		name: "PHRONESIS",
+		url_name: "",
+	},
+	{
+		name: "PANDORA'S BOX",
+		url_name: "",
+	},
+	{
+		name: "ROBOREX",
+		url_name: "",
+	},
+	{
+		name: "CONCEPTION",
+		url_name: "conception",
+	},
+	{
+		name: "BYTEHOC",
+		url_name: "bytehoc",
+	},
+	{
+		name: "CONCREATE",
+		url_name: "concreate",
+	},
+	{
+		name: "MANIGMA",
+		url_name: "",
+	},
 ];
 
-const current = "MANIGMA";
+const currentlyLive = ["BYTEHOC", "CONCREATE", "CONCEPTION"];
+
+const clusterObjs = [];
+
+clusters.forEach((cluster) => {
+	if (currentlyLive.includes(cluster.name)) {
+		clusterObjs.push(cluster);
+	}
+});
+
+const current = document.getElementById("cluster-name").innerHTML.toUpperCase();
 const sidenav = document.querySelector(".sidenav");
 const content = document.querySelector("#content");
 
-content.innerHTML += events
+function removeSlash(site) {
+	return site.replace(/\/$/, "");
+}
+
+content.innerHTML += clusterObjs
 	.map((x) => {
-		if (x !== current) return `<a href='#' class='options'>${x}</a>`;
+		let clusterUrl = removeSlash(window.location.href).split("/");
+		clusterUrl.splice(-2);
+		if (x.name !== current)
+			return `<a href='${
+				clusterUrl.join("/") + "/" + x.url_name
+			}' class='options'>${x.name}</a>`;
 		else return "";
 	})
 	.join("\n");

@@ -19,6 +19,7 @@ body {
 	-o-background-size: cover;
 	position: relative;
 	display: flex;
+	overflow: hidden;
 }
 
 .details-wrapper * {
@@ -44,15 +45,19 @@ body {
 }
 
 .details-heading-start {
-	font-size: 6em;
+	font-family: Poppins;
+	font-style: normal;
 	font-weight: 300;
-	line-height: 1em;
+	font-size: 98px;
+	line-height: 95%;
 }
 
 .details-heading-end {
-	line-height: 1em;
-	font-size: 6em;
-	font-weight: 700;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 98px;
+	line-height: 95%;
 }
 
 .details-body-wrapper {
@@ -111,35 +116,41 @@ body {
 @media only screen and (max-width: 320px) {
 	.details-container {
 		width: 70%;
-		margin-left: 2em;
-		margin-top: 8em;
+		margin-left: 1em;
+		margin-top: 6em;
 	}
 	.details-heading-start {
-		font-size: 5em;
+		font-size: 15vw;
 	}
 	.details-heading-end {
-		font-size: 5em;
+		font-size: 15vw;
+	}
+	.details-body {
+		width: 60%;
 	}
 }
 
 @media only screen and (min-width: 321px) and (max-width: 768px) {
 	.details-container {
 		width: 70%;
-		margin-left: 2em;
-		margin-top: 8em;
+		margin-left: 1em;
+		margin-top: 6em;
 	}
 	.details-heading-start {
-		font-size: 5em;
+		font-size: 15vw;
 	}
 	.details-heading-end {
-		font-size: 5em;
+		font-size: 15vw;
+	}
+	.details-body {
+		width: 60%;
 	}
 }
 
 @media only screen and (min-width: 769px) and (max-width: 959px) {
 	.details-container {
 		width: 75%;
-		margin-left: 2em;
+		margin-left: 1em;
 	}
 	.details-body {
 		width: 75%;
@@ -162,10 +173,10 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-	.details-container {
+	/* .details-container {
 		width: 50%;
 		margin-left: 2em;
-	}
+	} */
 	.details-body-wrapper {
 		height: 40vh;
 		max-height: 40vh;
@@ -173,7 +184,7 @@ body {
 		border-radius: 12px;
 		padding: 2rem 1.5rem;
 	}
-	.details-body {
+	/* .details-body {
 		width: 65%;
 	}
 
@@ -190,5 +201,5 @@ body {
 		font-weight: 300;
 		font-size: 14px;
 		line-height: 21px;
-	}
+	} */
 }

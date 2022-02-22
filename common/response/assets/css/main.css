@@ -1,0 +1,31 @@
+.cms-warning {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'GothamLight';
+}
+
+#injection .cms-error, #content_div .cms-error {
+    text-align: center;
+    overflow: unset;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'GothamLight';
+}
+
+.cms-error input {
+    background: #00000000;
+    color: #fff;
+    border: 0;
+    margin-top: 4vh;
+    cursor: pointer;
+}
+
+#injection .cms-info, #content_div .cms-info {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-family: 'GothamLight';
+    font-weight: bold;
+}

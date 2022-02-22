@@ -67,6 +67,33 @@ if(!defined('__PRAGYAN_CMS'))
                 <div class="details-heading-end" id="endName-content">Street</div>
             </div>
             <div class="details-body-wrapper">
+            <div id="injection">
+            <div id="asset-path">
+                <?php 
+                    $string = explode('/', $TEMPLATEBROWSERPATH);
+                    array_pop($string);
+                    $string = implode('/', $string);
+                    $nav =  $string."/common/p22assets/";
+                    echo $nav;
+                ?>
+            </div>
+            <div id="template-path">
+                <?php 
+                    $string = explode('/', $TEMPLATEBROWSERPATH);
+                    // array_pop($string);
+                    $string = implode('/', $string);
+                    echo $string;
+                ?>
+            </div>
+            <?php
+                $string = explode('/', $TEMPLATECODEPATH);
+                array_pop($string);
+                $string = implode('/', $string);
+                $responseHelpers = $string."/common/response/index.php";
+                require_once $responseHelpers;
+                ?>
+
+            </div>
                 <div class="details-body">
                     <div class="details-body-item">
                         <div class="details-body-item-head">
@@ -114,6 +141,6 @@ if(!defined('__PRAGYAN_CMS'))
         ?>
     </div>
     <script src="<?php echo $TEMPLATEBROWSERPATH; ?>/assets/scripts/main.js"></script>
-</body>
+</body
 
 </html>
