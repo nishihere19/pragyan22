@@ -51,6 +51,10 @@ body {
 	line-height: 95%;
 }
 
+.zoom {
+	background-size: cover !important;
+}
+
 .details-heading-end {
 	font-family: Poppins;
 	font-style: normal;
