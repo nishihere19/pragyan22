@@ -82,6 +82,8 @@
 	}
 
 	.menu-items {
+		overflow: scroll;
+		padding-left: 80vw;
 		height: 12vh;
 	}
 	/* .menu-wrapper {
