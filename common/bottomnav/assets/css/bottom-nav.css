@@ -82,9 +82,9 @@
 	}
 
 	.menu-items {
-		overflow: scroll;
-		padding-left: 80vw;
+		overflow-x: scroll;
 		height: 12vh;
+		justify-content: flex-start;
 	}
 	/* .menu-wrapper {
 		width: 200%;
