@@ -79,7 +79,6 @@ const makeBottomNav = () => {
 	let name = eventData.startName.trim();
 	if (eventData.endName !== "")
 		name += (name === "" ? "" : " ") + eventData.endName.trim();
-	console.log(name);
 	let headerItems = document.querySelectorAll(".div_topnav:nth-of-type(1) a");
 	let eventsInThisCluster = [];
 	headerItems.forEach((element) => {
@@ -95,7 +94,6 @@ const makeBottomNav = () => {
 			eventsInThisCluster.push(eventObj);
 		}
 	});
-	console.log(eventsInThisCluster);
 	let bNav = document.querySelector(".menu-items.menu-navigation-icons");
 	bNav.innerHTML = "";
 	eventsInThisCluster.forEach((event) => {
@@ -111,7 +109,6 @@ const makeBottomNav = () => {
 		"desktop/thumbnail/" + document.getElementById("event-img")?.innerHTML ||
 		"-"
 	}`;
-	console.log(imgTag);
 	document.querySelector(".zoom").style.background = `url("${imgTag}")`;
 };
 

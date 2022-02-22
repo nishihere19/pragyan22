@@ -16,7 +16,7 @@ if(!defined('__PRAGYAN_CMS'))
             $params=[];
             $cmstitle=$TITLE;
             $params=explode("-",$cmstitle);
-            echo $params[1]." | Pragyan 2022 - An International Techno-managerial Festival of the National Institute of Technology, Tiruchirappalli"; ?>
+            echo $params[1]." | Pragyan 2021 - An International Techno-managerial Festival of the National Institute of Technology, Tiruchirappalli"; ?>
     </title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
