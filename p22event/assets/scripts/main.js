@@ -51,7 +51,7 @@ const loadEventData = () => {
 
 	// setting margin to accomodate stuff
 	if (innerWidth > 768) {
-		if (endName === "") {
+		if (endName === "" || startName === "") {
 			document.querySelector(".details-container").style.marginTop = "8%";
 		} else {
 			document.querySelector(".details-container").style.marginTop = "4%";
@@ -59,7 +59,8 @@ const loadEventData = () => {
 	}
 
 	let name = eventData.startName;
-	if (eventData.endName !== "") name += " " + eventData.endName;
+	if (eventData.endName !== "")
+		name += (name === "" ? "" : " ") + eventData.endName;
 	document.querySelector(
 		".details-wrapper"
 	).style.background = `url(assets/images/events/${name}.jpeg)`;
@@ -76,7 +77,8 @@ const loadEventData = () => {
 
 const makeBottomNav = () => {
 	let name = eventData.startName.trim();
-	if (eventData.endName !== "") name += " " + eventData.endName.trim();
+	if (eventData.endName !== "")
+		name += (name === "" ? "" : " ") + eventData.endName.trim();
 	console.log(name);
 	let headerItems = document.querySelectorAll(".div_topnav:nth-of-type(1) a");
 	let eventsInThisCluster = [];
