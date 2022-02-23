@@ -220,7 +220,46 @@ fieldset ol li a {
 }
 
 #injection > form > fieldset > table > tbody > tr:nth-child(8) {
-	display: initial;
+	display: flex;
+	flex-direction: row;
+	align-content: space-around;
+	justify-content: space-between;
+}
+
+#injection
+	> form
+	> fieldset
+	> table
+	> tbody
+	> tr:nth-child(8)
+	> td:nth-child(1) {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-weight: 300;
+}
+
+#injection
+	> form
+	> fieldset
+	> table
+	> tbody
+	> tr:nth-child(8)
+	> td:nth-child(2)
+	> a {
+	font-weight: 600;
+	color: #4f8cff;
+}
+
+#injection
+	> form
+	> fieldset
+	> table
+	> tbody
+	> tr:nth-child(8)
+	> td:nth-child(2):hover
+	* {
+	text-decoration: underline !important;
 }
 
 .action-stuff > td {
@@ -239,7 +278,7 @@ fieldset ol li a {
 	font-size: 18px;
 }
 #injection > form > fieldset > table > tbody > tr:nth-child(11) > td > a:hover {
-	text-decoration: underline;
+	text-decoration: underline !important;
 }
 
 /* captcha text */
