@@ -210,8 +210,8 @@ fieldset ol li a {
 }
 
 #injection > form > fieldset > table > tbody > tr {
-	display: flex;
-	flex-direction: column;
+	display: flex !important;
+	flex-direction: column !important;
 }
 
 #injection > form > fieldset > table > tbody > tr > td:nth-child(1) {
@@ -310,7 +310,7 @@ form fieldset table tbody {
 
 #injection form[name="user_reg_usrFrm"] table tr td:first-child,
 #injection form[name="user_profile_usrFrm"] table tr td:first-child {
-	width: 45%;
+	/* width: 45%; */
 	margin-right: 3px;
 }
 
@@ -473,6 +473,10 @@ td {
 	/* width: 100%; */
 }
 
+#injection > form > fieldset > table {
+	margin-bottom: 1.5rem;
+}
+
 @media screen and (max-width: 786px) {
 	#main_div {
 		position: absolute;
@@ -488,6 +492,23 @@ td {
 	#right_div {
 		width: 100%;
 		display: initial;
+		height: fit-content;
+	}
+
+	form fieldset table,
+	form fieldset table tbody {
+		width: 100%;
+		font-size: 1em;
+	}
+
+	#injection form,
+	#injection div form {
+		width: 100%;
+		overflow-x: hidden;
+	}
+
+	#injection > form > fieldset > legend {
+		width: 100% !important;
 	}
 
 	#right_div #injection {
@@ -498,6 +519,7 @@ td {
 
 	.footer {
 		margin-top: 32vh;
+		width: 100%;
 	}
 
 	#title {
@@ -545,6 +567,9 @@ td {
 @media screen and (max-width: 578px) {
 	#right_div #injection {
 		width: 75vw;
+		height: fit-content;
+		max-height: 65vh;
+		margin: 0 0.5rem;
 	}
 
 	#title {
