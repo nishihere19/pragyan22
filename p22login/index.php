@@ -41,7 +41,7 @@ if(!defined('__PRAGYAN_CMS'))
 		?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
-    <!-- scripts -->
+    <!-- stylesheet -->
     <link href="<?php echo $TEMPLATEBROWSERPATH; ?>/assets/css/main.css" rel="stylesheet">
 </head>
 
@@ -76,6 +76,8 @@ if(!defined('__PRAGYAN_CMS'))
     </div>
     
 
+    <!-- scripts -->
+    <script src="<?php echo $TEMPLATEBROWSERPATH; ?>/assets/scripts/main.js"></script>
     <!-- Scripts -->
     <script>
         dc = document;
