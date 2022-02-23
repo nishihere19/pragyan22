@@ -30,7 +30,7 @@ const clusters = [
 	},
 	{
 		name: "ROBOREX",
-		url_name: "",
+		url_name: "roborex",
 	},
 	{
 		name: "CONCEPTION",
@@ -46,11 +46,11 @@ const clusters = [
 	},
 	{
 		name: "MANIGMA",
-		url_name: "",
+		url_name: "manigma",
 	},
 ];
 
-const currentlyLive = ["BYTEHOC", "CONCREATE", "CONCEPTION"];
+const currentlyLive = ["BYTEHOC", "CONCREATE", "CONCEPTION", "MANIGMA", "ROBOREX"];
 
 const clusterObjs = [];
 
