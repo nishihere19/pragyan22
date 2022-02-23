@@ -487,6 +487,7 @@ td {
 
 	#right_div {
 		width: 100%;
+		display: initial;
 	}
 
 	#right_div #injection {

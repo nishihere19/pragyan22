@@ -61,9 +61,9 @@ const addClassNameForSomeChildren = () => {
 		"#injection > form > fieldset > table > tbody > tr"
 	);
 	console.log(rows);
-	const start = 7,
-		end = 9;
-	for (let i = start; i <= end; i++) {
+	const end = rows.length - 1,
+		length = 3;
+	for (let i = end; i >= end - length; i--) {
 		console.log(rows[i]);
 		if (rows && rows[i]) {
 			rows[i].classList.add("action-stuff");
