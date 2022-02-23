@@ -478,6 +478,7 @@ td {
 }
 
 #injection > div.cms-error,
+#injection > div.cms-info,
 #injection > div.cms-warning {
 	color: red;
 	font-weight: 600;
@@ -489,7 +490,8 @@ td {
 	border: solid 0.5px red;
 }
 
-#injection > div.cms-warning {
+#injection > div.cms-warning,
+#injection > div.cms-info {
 	color: #fff;
 	background: #4f8cff33;
 	border: solid 0.5px #4f8cff;
