@@ -134,6 +134,14 @@ if(!defined('__PRAGYAN_CMS'))
                         <div class="details-body-item-content hidden" id="resources-content">
                         </div>
                     </div>
+		    <div class="details-body-item">
+                        <div class="details-body-item-head">
+                            Registration
+                            <i class="material-icons">keyboard_arrow_right</i>
+                        </div>
+                        <div class="details-body-item-content hidden" id="registration-content">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

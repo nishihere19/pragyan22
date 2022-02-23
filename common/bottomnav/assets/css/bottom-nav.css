@@ -65,7 +65,7 @@
 }
 
 .menu-items > a.zoom {
-	height: 120%;
+	height: 100%;
 	width: 125%;
 	border: none;
 	flex-shrink: 0;

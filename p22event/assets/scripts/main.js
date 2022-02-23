@@ -40,6 +40,14 @@ const loadEventData = () => {
 	const rules = document.getElementById("event-rules")?.innerHTML || "";
 	const format = document.getElementById("event-format")?.innerHTML || "";
 	const resources = document.getElementById("event-resources")?.innerHTML || "";
+	var registration = document.querySelector(".tabContent");
+
+	if(registration != null){
+		registration = registration.innerHTML;
+	} else {
+		registration = 'You must be logged in to fill this form. <a href="./+login">Click here</a> to login.';
+	}
+	
 	eventData = {
 		cluster,
 		startName,
@@ -48,6 +56,7 @@ const loadEventData = () => {
 		format,
 		rules,
 		resources,
+		registration,
 	};
 
 	// setting margin to accomodate stuff

@@ -48,7 +48,7 @@ if(!defined('__PRAGYAN_CMS'))
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
          #menu-bar {
-            display: none;
+            visibility: hidden;
         } 
 
         #injection {

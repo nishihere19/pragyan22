@@ -130,6 +130,22 @@ body {
 	overflow: hidden;
 }
 
+#registration-content  br {
+	display: none;
+}
+
+fieldset {
+	border: none;
+}
+
+input[type="submit"] {
+	background-color: #afb1c05c;
+	border: 2px solid #ffffff;
+	height: 50px;
+	backdrop-filter: blur(64px);
+	width: 100px;
+}
+
 /* add a media query for each of this */
 /* sm: '320px',
   md: '768px',
