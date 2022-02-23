@@ -477,6 +477,17 @@ td {
 	margin-bottom: 1.5rem;
 }
 
+#injection > div.cms-error {
+	color: red;
+	font-weight: 600;
+	margin: 1rem 1.5rem;
+	font-family: "Poppins";
+	background: #ff000022;
+	padding: 1rem;
+	border-radius: 1rem;
+	border: solid 0.5px red;
+}
+
 @media screen and (max-width: 786px) {
 	#main_div {
 		position: absolute;
