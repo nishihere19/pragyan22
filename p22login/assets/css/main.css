@@ -477,7 +477,8 @@ td {
 	margin-bottom: 1.5rem;
 }
 
-#injection > div.cms-error {
+#injection > div.cms-error,
+#injection > div.cms-warning {
 	color: red;
 	font-weight: 600;
 	margin: 1rem 1.5rem;
@@ -486,6 +487,17 @@ td {
 	padding: 1rem;
 	border-radius: 1rem;
 	border: solid 0.5px red;
+}
+
+#injection > div.cms-warning {
+	color: #fff;
+	background: #4f8cff33;
+	border: solid 0.5px #4f8cff;
+}
+
+#injection > div.cms-warning a {
+	color: #4f8cff;
+	text-decoration: underline !important;
 }
 
 @media screen and (max-width: 786px) {
