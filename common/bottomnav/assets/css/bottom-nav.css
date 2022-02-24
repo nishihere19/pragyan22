@@ -15,7 +15,7 @@
 	text-align: center;
 	display: flex;
 	width: 80vw;
-	justify-content: space-around;
+	justify-content: flex-start;
 	z-index: 100 !important;
 	align-items: end;
 }
@@ -58,6 +58,10 @@
 	line-height: 27px;
 	text-transform: uppercase !important;
 	color: #ffffff;
+}
+
+.menu-items.menu-navigation-icons.black * {
+  color: black;
 }
 
 .menu-items > a.zoom {

@@ -25,6 +25,10 @@ body {
 	color: white;
 }
 
+.details-wrapper.black * {
+	color: black;
+}
+
 .details-container {
 	flex-direction: column;
 	margin-top: 8%;

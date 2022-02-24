@@ -1,5 +1,6 @@
 // get all with class of material-icons
 let headings = document.querySelectorAll(".details-body-item-head");
+const change_events = ["Town Trace", "How Stuff Works", "Plan It", "Bounty Quest", "Marketing Hub", "The Ultimate Manager"];
 
 // addEventListener to all icons
 headings.forEach((heading) => {
@@ -64,6 +65,10 @@ const loadEventData = () => {
 	document.querySelector(
 		".details-wrapper"
 	).style.background = `url(assets/images/events/${name}.jpeg)`;
+  if(change_events.includes(name)) {
+    document.querySelector(".details-wrapper").classList.add("black");
+    document.querySelector(".menu-items.menu-navigation-icons").classList.add("black");
+  }
 	for (let key in eventData) {
 		let body = document.getElementById(`${key}-content`);
 		body.innerHTML = eventData[key];
