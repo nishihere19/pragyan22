@@ -67,6 +67,9 @@ if(!defined('__PRAGYAN_CMS'))
     ?>
     <div class="details-wrapper">
         <div class="details-container">
+            <div id="top-nav">
+                <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/../p22assets/common/logo.png" alt="" srcset="" id="pragyan_logo">
+            </div>
             <div id="menu-bar"><?php echo $MENUBAR;?></div>
             <div class="details-heading-container">
                 <span class="details-cluster" id="cluster-content">Manigma's</span>
@@ -105,9 +108,9 @@ if(!defined('__PRAGYAN_CMS'))
                     <div class="details-body-item">
                         <div class="details-body-item-head">
                             Description
-                            <i class="material-icons">keyboard_arrow_down</i>
+                            <i class="material-icons">keyboard_arrow_right</i>
                         </div>
-                        <div class="details-body-item-content" id="description-content">
+                        <div class="details-body-item-content hidden" data-height="0px" id="description-content">
                         </div>
                     </div>
                     <div class="details-body-item">
@@ -115,7 +118,7 @@ if(!defined('__PRAGYAN_CMS'))
                             Format
                             <i class="material-icons">keyboard_arrow_right</i>
                         </div>
-                        <div class="details-body-item-content hidden" id="format-content">
+                        <div class="details-body-item-content hidden" data-height="0px" id="format-content">
                         </div>
                     </div>
                     <div class="details-body-item">
@@ -123,7 +126,7 @@ if(!defined('__PRAGYAN_CMS'))
                             Rules
                             <i class="material-icons">keyboard_arrow_right</i>
                         </div>
-                        <div class="details-body-item-content hidden" id="rules-content">
+                        <div class="details-body-item-content hidden" data-height="0px"  id="rules-content">
                         </div>
                     </div>
                     <div class="details-body-item">
@@ -131,7 +134,7 @@ if(!defined('__PRAGYAN_CMS'))
                             Resources
                             <i class="material-icons">keyboard_arrow_right</i>
                         </div>
-                        <div class="details-body-item-content hidden" id="resources-content">
+                        <div class="details-body-item-content hidden" data-height="0px"  id="resources-content">
                         </div>
                     </div>
 		    <div class="details-body-item">
@@ -146,8 +149,12 @@ if(!defined('__PRAGYAN_CMS'))
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     <div id="overlay"></div>
     <div class="side-nav">
+=======
+    <div class="bottom-nav">
+>>>>>>> 6142261 (feat: some styling for event page)
         <?php 
             $string = explode('/', $TEMPLATECODEPATH);
             array_pop($string);

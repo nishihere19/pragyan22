@@ -1,6 +1,13 @@
 // get all with class of material-icons
 let headings = document.querySelectorAll(".details-body-item-head");
-const change_events = ["Town Trace", "How Stuff Works", "Plan It", "Bounty Quest", "Marketing Hub", "The Ultimate Manager"];
+const change_events = [
+	"Town Trace",
+	"How Stuff Works",
+	"Plan It",
+	"Bounty Quest",
+	"Marketing Hub",
+	"The Ultimate Manager",
+];
 
 // addEventListener to all icons
 headings.forEach((heading) => {
@@ -11,9 +18,13 @@ headings.forEach((heading) => {
 		else icon = e.target.firstChild.nextElementSibling;
 		if (!body) body = e.target.parentElement.nextElementSibling;
 		if (body.classList.contains("hidden")) {
+			body.dataset.height = body.scrollHeight;
+			body.style.height = body.scrollHeight + "px";
 			body.classList.remove("hidden");
 			icon.innerHTML = "keyboard_arrow_down";
 		} else {
+			body.dataset.height = 0;
+			body.style.height = "0px";
 			body.classList.add("hidden");
 			icon.innerHTML = "keyboard_arrow_right";
 		}
@@ -42,12 +53,13 @@ const loadEventData = () => {
 	const resources = document.getElementById("event-resources")?.innerHTML || "";
 	var registration = document.querySelector(".tabContent");
 
-	if(registration != null){
+	if (registration != null) {
 		registration = registration.innerHTML;
 	} else {
-		registration = 'You must be logged in to fill this form. <a href="./+login">Click here</a> to login.';
+		registration =
+			'You must be logged in to fill this form. <a href="./+login">Click here</a> to login.';
 	}
-	
+
 	eventData = {
 		cluster,
 		startName,
@@ -60,13 +72,13 @@ const loadEventData = () => {
 	};
 
 	// setting margin to accomodate stuff
-	if (innerWidth > 768) {
-		if (endName === "" || startName === "") {
-			document.querySelector(".details-container").style.marginTop = "8%";
-		} else {
-			document.querySelector(".details-container").style.marginTop = "4%";
-		}
-	}
+	// if (innerWidth > 768) {
+	// 	if (endName === "" || startName === "") {
+	// 		document.querySelector(".details-container").style.marginTop = "8%";
+	// 	} else {
+	// 		document.querySelector(".details-container").style.marginTop = "4%";
+	// 	}
+	// }
 
 	let name = eventData.startName;
 	if (eventData.endName !== "")
@@ -74,14 +86,15 @@ const loadEventData = () => {
 	document.querySelector(
 		".details-wrapper"
 	).style.background = `url(assets/images/events/${name}.jpeg)`;
-  if(change_events.includes(name)) {
-    document.querySelector(".menu-icon").classList.add("black");
-    const nav_logo = document.querySelector("#nav_logo_image")
-    if(nav_logo)
-      nav_logo.classList.add("black");
-    document.querySelector(".details-wrapper").classList.add("black");
-    document.querySelector(".menu-items.menu-navigation-icons").classList.add("black");
-  }
+	if (change_events.includes(name)) {
+		document.querySelector(".menu-icon").classList.add("black");
+		const nav_logo = document.querySelector("#nav_logo_image");
+		if (nav_logo) nav_logo.classList.add("black");
+		document.querySelector(".details-wrapper").classList.add("black");
+		document
+			.querySelector(".menu-items.menu-navigation-icons")
+			.classList.add("black");
+	}
 	for (let key in eventData) {
 		let body = document.getElementById(`${key}-content`);
 		body.innerHTML = eventData[key];
@@ -130,7 +143,15 @@ const makeBottomNav = () => {
 	document.querySelector(".zoom").style.background = `url("${imgTag}")`;
 };
 
+const setTopNavData = () => {
+	if (document.getElementById("pragyan_logo"))
+		document.getElementById("pragyan_logo").src =
+			document.getElementById("asset-path").innerHTML.trim() +
+			"/common/logo.png";
+};
+
 document.addEventListener("DOMContentLoaded", () => {
 	loadEventData();
 	makeBottomNav();
+	setTopNavData();
 });

@@ -61,7 +61,7 @@ clusters.forEach((cluster) => {
 });
 
 const current = document.getElementById("cluster-name").innerHTML.toUpperCase();
-const sidenav = document.querySelector(".sidenav");
+const bottomnav = document.querySelector(".bottomnav");
 const content = document.querySelector("#content");
 
 function removeSlash(site) {
@@ -80,7 +80,7 @@ content.innerHTML += clusterObjs
 	})
 	.join("\n");
 
-sidenav.innerHTML = `<div id="hello" onclick="change()"><span id="cur">${current}</span> <img id="dropup-button" style="margin-left: 10px" src="${sidenav.dataset.img}"></div>`;
+bottomnav.innerHTML = `<div id="hello" onclick="change()"><span id="cur">${current}</span> <img id="dropup-button" style="margin-left: 10px" src="${bottomnav.dataset.img}"></div>`;
 
 let open = false;
 
@@ -93,14 +93,14 @@ const change = () => {
 	if (!open) {
 		content.style.display = "flex";
 		drop_btn.classList.add("checked");
-		total.classList.add("sidenav-open");
+		total.classList.add("bottomnav-open");
 
 		setTimeout(() => {
 			content_a.forEach((x) => {
 				x.style.opacity = "1";
 			});
 		}, 10);
-		menu.classList.add("sidenav-open");
+		menu.classList.add("bottomnav-open");
 	} else {
 		content_a.forEach((x) => {
 			x.style.opacity = "0";
@@ -109,7 +109,7 @@ const change = () => {
 			"transitionend",
 			() => {
 				content.style.display = "none";
-				total.classList.remove("sidenav-open");
+				total.classList.remove("bottomnav-open");
 				drop_btn.classList.remove("checked");
 			},
 			{
@@ -118,7 +118,7 @@ const change = () => {
 				passive: false,
 			}
 		);
-		// menu.classList.remove("sidenav-open");
+		// menu.classList.remove("bottomnav-open");
 	}
 	open = !open;
 };

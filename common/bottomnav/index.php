@@ -8,7 +8,7 @@
         <link href="'.$string.'/common/bottomnav/assets/css/bottom-side-nav.css" rel="stylesheet" type="text/css">
         <div class="navbar">
             <div class="total">
-                <div class="sidenav" data-img="'.$string.'/common/bottomnav/assets/images/right.png"></div>
+                <div class="bottomnav" data-img="'.$string.'/common/bottomnav/assets/images/right.png"></div>
                 <div id="content"></div>
             </div>
                 <div class="menu-items menu-navigation-icons">
