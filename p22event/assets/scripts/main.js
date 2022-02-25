@@ -66,6 +66,10 @@ const loadEventData = () => {
 		".details-wrapper"
 	).style.background = `url(assets/images/events/${name}.jpeg)`;
   if(change_events.includes(name)) {
+    document.querySelector(".menu-icon").classList.add("black");
+    const nav_logo = document.querySelector("#nav_logo_image")
+    if(nav_logo)
+      nav_logo.classList.add("black");
     document.querySelector(".details-wrapper").classList.add("black");
     document.querySelector(".menu-items.menu-navigation-icons").classList.add("black");
   }

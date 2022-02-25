@@ -6,9 +6,6 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap" rel="stylesheet">
         <link href="'.$string.'/common/bottomnav/assets/css/bottom-nav.css" rel="stylesheet" type="text/css">
         <link href="'.$string.'/common/bottomnav/assets/css/bottom-side-nav.css" rel="stylesheet" type="text/css">
-        <div class="menu-icon">
-        </div>
-        
         <div class="navbar">
             <div class="total">
                 <div class="sidenav" data-img="'.$string.'/common/bottomnav/assets/images/right.png"></div>

@@ -58,6 +58,13 @@ if(!defined('__PRAGYAN_CMS'))
 </head>
 
 <body>
+    <?php
+        $string = explode('/', $TEMPLATECODEPATH);
+        array_pop($string);
+        $string = implode('/', $string);
+        $nav = $string."/common/sidenav/index.php";
+        include $nav;
+    ?>
     <div class="details-wrapper">
         <div class="details-container">
             <div id="menu-bar"><?php echo $MENUBAR;?></div>
@@ -131,6 +138,7 @@ if(!defined('__PRAGYAN_CMS'))
             </div>
         </div>
     </div>
+    <div id="overlay"></div>
     <div class="side-nav">
         <?php 
             $string = explode('/', $TEMPLATECODEPATH);
