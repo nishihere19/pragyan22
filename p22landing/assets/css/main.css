@@ -11,6 +11,26 @@ body {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
+#overlay {
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+}
+
+#overlay.active {
+  display: block;
+  z-index: 1;
+}
+
 /* Strucutre */
 
 .landing-wrapper {
@@ -32,7 +52,7 @@ body {
   align-items: center;
   width: 100%;
   height: 20vh;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   box-sizing: border-box;
 }
 
@@ -86,6 +106,11 @@ body {
 }
 
 /* Nav Bar Stuff */
+
+.landing-left-menu{
+  visibility: hidden;
+  z-index: -1;
+}
 
 .landing-left-menu,
 .landing-right-menu {
@@ -235,14 +260,14 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
-  .landing-nav-bar{
+  .landing-nav-bar {
     height: 15vh;
     justify-content: space-around;
     align-items: center;
     width: 100%;
   }
 
-  .landing-logo{
+  .landing-logo {
     text-align: center;
   }
 
@@ -251,54 +276,53 @@ body {
     height: 1.5em;
   }
 
-  #landing-main-logo{
+  #landing-main-logo {
     width: 75%;
   }
-  .landing-left-menu{
+  .landing-left-menu {
     padding: 0;
     text-align: center;
     width: 4em;
   }
-  .landing-right-menu{
+  .landing-right-menu {
     padding: 0;
     width: 4em;
   }
-  
-  .fab-icon{
+
+  .fab-icon {
     width: 1.75em;
-    height: 1.75em;  
+    height: 1.75em;
   }
 
-  .landing-right-menu-list{
+  .landing-right-menu-list {
     width: 100vw;
-    padding-right: 1em!important;
+    padding-right: 1em !important;
   }
 
   .landing-title {
     font-size: 1.5em;
   }
-  
-  .landing-footer{
+
+  .landing-footer {
     flex-direction: column-reverse;
   }
-  
-  .landing-credits{
+
+  .landing-credits {
     width: 100%;
     padding: 1em;
     text-align: center;
   }
-  .landing-socials{
+  .landing-socials {
     width: 100%;
     padding: 1em;
     padding-right: 0;
   }
- 
 }
 @media only screen and (min-width: 500px) and (max-width: 700px) {
   .landing-title {
     font-size: 2.5em;
   }
-  .landing-socials{
+  .landing-socials {
     width: 80%;
   }
 }
@@ -306,7 +330,7 @@ body {
   .landing-title {
     font-size: 3em;
   }
-  .landing-socials{
+  .landing-socials {
     width: 50%;
   }
 }

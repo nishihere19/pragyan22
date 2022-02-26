@@ -51,7 +51,8 @@ const handleSocialToggle = () => {
   if (isSocialOpen == -1) return;
   if (isSocialOpen) {
     isSocialOpen = -1;
-    fabIcon.innerHTML = `<img src="./assets/images/fab-logo.png" id="fab-img-icon" alt="fab-icon">`;
+    let templateBrowserPath = document.getElementById("template-browser-path").innerHTML.trim();
+    fabIcon.innerHTML = `<img src="${templateBrowserPath}/assets/images/fab-logo.png" id="fab-img-icon" alt="fab-icon">`;
     nav.style.width = 0;
     nav.style.paddingRight = 0;
     iconsWrapper.style.display = "none";
