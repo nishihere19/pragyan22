@@ -52,9 +52,10 @@ if(!defined('__PRAGYAN_CMS'))
         array_pop($string);
         $string = implode('/', $string);
     ?>
-
     <!-- <div id="title"> welcome to the metaverse </div> -->
     <div id="main_div"> 
+
+    
         <div id="left_div"> 
             <!-- <img id="logo" src="<?php echo $TEMPLATEBROWSERPATH; ?>/assets/images/p21_white.png">  -->
         </div>
