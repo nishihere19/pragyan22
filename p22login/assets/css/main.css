@@ -183,6 +183,26 @@ fieldset ol li a {
 	padding: 1rem 1rem 2rem;
 	height: fit-content;
 }
+#injection::-webkit-scrollbar {
+	height: 10px;
+	width: 10px;
+	transform: translate(-15px, 20px);
+}
+#injection::-webkit-scrollbar-track {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+}
+#injection::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 20px;
+}
+#injection::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+#submitbutton:hover {
+	background-color: #2465dc;
+}
 
 #injection form[name="user_profile_usrFrm"] fieldset legend {
 	display: none;
@@ -446,6 +466,53 @@ form[name="user_reg_usrFrm"] img[alt="CAPTCHA"] {
 	text-decoration: underline !important;
 }
 
+.cms-registrationform {
+	max-height: 80vh;
+}
+
+.cms-registrationform #profile-heading {
+	font-size: 2rem;
+	color: #4f8cff;
+	font-weight: 600;
+	font-family: Poppins;
+	width: fit-content;
+	margin: 1rem auto;
+}
+
+.cms-registrationform * {
+	border: none;
+}
+
+#injection hr {
+	display: none;
+}
+
+#profileimg {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+}
+
+#cms-registrationform > fieldset > table > tbody > tr > td:nth-child(1) {
+	/* border: solid 1px green; */
+	width: 50%;
+	font-weight: 600;
+}
+
+#cms-registrationform > fieldset > table > tbody > tr {
+	margin-top: 0.5rem;
+}
+
+form#cms-registrationform table {
+	border-collapse: separate;
+	border-spacing: 0 1rem;
+}
+
+form#cms-registrationform input {
+	margin: 0;
+	padding: 0.5rem 1rem;
+}
+
 #injection form a {
 	color: #fff;
 	text-decoration: none !important;
@@ -586,6 +653,10 @@ td {
 	#injection form[name="user_profile_usrFrm"] {
 		margin-top: 5vh;
 	}
+
+	.cms-registrationform #profile-heading {
+		margin-top: 4rem;
+	}
 }
 
 @media screen and (max-width: 578px) {
@@ -618,13 +689,13 @@ td {
 	}
 }
 
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
 	width: 0px !important;
 	background: transparent;
-}
+} */
 
-* {
+/* * {
 	overflow: -moz-scrollbars-none;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
-}
+} */

@@ -69,9 +69,35 @@ const addClassNameForSomeChildren = () => {
 	}
 };
 
+const initProfileForm = () => {
+	if (location.href.includes("profile")) {
+		try {
+			document.querySelector(
+				"#injection > fieldset:nth-child(9)"
+			).style.display = "none";
+			document.querySelector(
+				"#injection > fieldset:nth-child(10)"
+			).style.display = "none";
+			document.querySelector(
+				"#cms-registrationform > fieldset > table > tbody > tr:nth-child(9)"
+			).style.display = "none";
+
+			injectProfilePage();
+		} catch (err) {}
+	}
+};
+
+const injectProfilePage = () => {
+	document.querySelector("#cms-registrationform").innerHTML =
+		"<div id='profile-heading'>Edit Profile</div>" +
+		document.querySelector("#cms-registrationform").innerHTML;
+};
+
 window.onload = () => {
 	injectFieldNames();
 	addQuestionMarkToTheEndOfForgotPassword();
 	// updateCaptchaText();
 	addClassNameForSomeChildren();
+
+	initProfileForm();
 };
