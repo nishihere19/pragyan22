@@ -28,7 +28,7 @@ document.addEventListener("mousemove", handleMouseOver);
 // Type 2: Simple constant rotation (for phone)
 if (mobileAndTabletCheck()) {
   world.controls().autoRotate = true;
-  world.controls().autoRotateSpeed = 5;
+  world.controls().autoRotateSpeed = 1;
 }
 
 if (window.innerHeight > window.innerWidth) {
