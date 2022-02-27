@@ -1,13 +1,3 @@
-@font-face {
-	font-family: GothamBold;
-	src: url("../fonts/Gotham-Bold.otf") format("opentype");
-}
-
-@font-face {
-	font-family: "GothamLight";
-	src: url("../fonts/Gotham-Light.otf") format("opentype");
-}
-
 html,
 body {
 	box-sizing: border-box;
@@ -17,8 +7,23 @@ body {
 	overflow-x: hidden;
 }
 
+#logo {
+  content: url(../../../common/p22assets/common/MainLogo22White.png)
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  background-position: 50% 50%;
+  z-index: -1;
+}
+
 body {
-	background-image: url("../images/bg.png");
+  background: #0f120f;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -77,17 +82,15 @@ body {
 	/* justify-content: space-between; */
 	/* align-items: center; */
 	margin-bottom: 5vh;
-	max-height: 60vh;
 	vertical-align: center;
 }
 
 .content a {
 	text-decoration: none;
-	font-family: GothamBold;
+  color: #ffffff;
 }
 
 .cluster-list > div {
-	padding: 10px;
 	transition: all 0.2s ease-in;
 }
 
@@ -97,6 +100,7 @@ body {
 
 .cluster-list {
 	display: flex;
+  align-items: center;
 	flex-direction: column;
 	width: 100%;
 	text-align: center;
@@ -112,16 +116,23 @@ body {
 	font-size: 24px;
 	line-height: 36px;
 
-	color: #ffffff;
 }
 
-/* .cluster-list > div:hover {
-  color: rgb(162, 123, 247);
-  padding-left: 5%;
+.cluster-list > div:hover {
   opacity: 1;
   transition: all 0.2s ease-in 0s;
-  transform: scale(1);
-} */
+  transform: scale(1.2);
+  border-bottom: 2px solid #ffffff;
+}
+
+.cluster-list > div:hover > a {
+  color: #ffffff;
+}
+
+.ind-cluster {
+  padding: 8px 0px 8px 0px;
+  border-bottom: 2px solid #81818181;
+}
 
 .event-list {
 	display: flex;
@@ -154,7 +165,6 @@ body {
 
 	.content {
 		flex-direction: column-reverse;
-		max-height: 60vh;
 	}
 
 	.event-list {
@@ -171,11 +181,6 @@ body {
 		line-height: 31px;
 		padding-bottom: 0px;
 		margin-top: 2vh;
-	}
-
-	.cluster-list > div {
-		padding: 5px;
-		padding-left: 5%;
 	}
 
 	.mobile-event-list div {

@@ -21,6 +21,7 @@ if(!defined('__PRAGYAN_CMS'))
     <meta name="description" content="<?php echo $SITEDESCRIPTION ?>" />
     <meta name="keywords" content="<?php echo $SITEKEYWORDS.', '.$PAGEKEYWORDS ?>" />
     <meta name="google" content="notranslate">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer data-deferred="1"></script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJH35RCT1D"></script>
@@ -45,10 +46,6 @@ if(!defined('__PRAGYAN_CMS'))
         #menu-bar {
             display: none;
         }
-
-        #injection {
-            display: none;
-        }
     </style>
 </head>
 <body>
@@ -58,19 +55,13 @@ if(!defined('__PRAGYAN_CMS'))
         $string = implode('/', $string);
     ?>
     <div class="logo">
-        <a href="/21/home/"><img src="<?php echo $TEMPLATEBROWSERPATH; ?>/assets/images/p21_white.png"></a>
+        <a href="/22/home/"><img id="logo"></a>
     </div>
     <div class="header">
         <!-- <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/assets/images/events.png"> -->
         <!-- <h1 class="event-title">EVENTS</h1> -->
     </div>
     <div id="menu-bar"><?php echo $MENUBAR;?></div>
-    <div id="injection">
-        <?php
-            $responseHelpers = $string."/common/response/index.php";
-            require_once $responseHelpers;
-        ?>
-    </div>
     <div class="content">
         <div class="menu-modal">
     <h1 class="event-title">EVENTS</h1>
@@ -81,17 +72,11 @@ if(!defined('__PRAGYAN_CMS'))
         $path = $string."/common/sidenav/index.php";
         require_once $path;
     ?>
+    <div id="overlay"></div>
 
-    <script>
-        // let title = "Events";
-        // document.querySelector(".title").innerText = title;
-
-        let header = document.querySelectorAll(".cms-menuhead")[1];
-        if(!header) 
-            header = "";
-        else 
-            header = header.innerText.trim();
-    </script>
-    <script src="<?php echo $TEMPLATEBROWSERPATH; ?>/assets/scripts/main.js"></script>
+    <script src="<?php echo $TEMPLATEBROWSERPATH; ?>/assets/scripts/main.js" defer></script>
+    <div id="particles-js"></div>
+    <script src="<?php echo $TEMPLATEBROWSERPATH; ?>/assets/scripts/particles-config.js"></script>
+</body>
 </body>
 </html>
