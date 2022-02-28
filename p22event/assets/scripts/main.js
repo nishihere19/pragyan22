@@ -86,7 +86,10 @@ const loadEventData = () => {
 	document.querySelector(
 		".details-wrapper"
 	).style.background = `url(assets/images/events/${name}.jpeg)`;
+	console.log("name", name);
 	if (change_events.includes(name)) {
+		const r = document.querySelector(":root");
+		r.style.setProperty("--text-color", "#000000");
 		document.querySelector(".menu-icon").classList.add("black");
 		const nav_logo = document.querySelector("#nav_logo_image");
 		if (nav_logo) nav_logo.classList.add("black");

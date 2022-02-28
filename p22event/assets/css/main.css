@@ -5,20 +5,24 @@
 	font-family: "Poppins";
 }
 
+:root {
+	--text-color: #ffffff;
+}
+
 #overlay {
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  backdrop-filter: blur(2px);
-  background-color: rgba(0, 0, 0, .9);
-  display: none;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	backdrop-filter: blur(2px);
+	background-color: rgba(0, 0, 0, 0.9);
+	display: none;
 }
 
 #overlay.active {
-  display: block;
-   z-index: 1;
+	display: block;
+	z-index: 1;
 }
 
 body {
@@ -158,7 +162,7 @@ body {
 	height: 1px;
 	bottom: -1px;
 	left: 0;
-	background-color: #fff;
+	background-color: var(--text-color);
 	transform-origin: bottom right;
 	transition: transform 0.25s ease-out, height 0.2s;
 	border-radius: 2px;
@@ -192,7 +196,7 @@ body {
 	overflow: hidden;
 }
 
-#registration-content  br {
+#registration-content br {
 	display: none;
 }
 
