@@ -149,12 +149,9 @@ if(!defined('__PRAGYAN_CMS'))
             </div>
         </div>
     </div>
-<<<<<<< HEAD
     <div id="overlay"></div>
     <div class="side-nav">
-=======
     <div class="bottom-nav">
->>>>>>> 6142261 (feat: some styling for event page)
         <?php 
             $string = explode('/', $TEMPLATECODEPATH);
             array_pop($string);

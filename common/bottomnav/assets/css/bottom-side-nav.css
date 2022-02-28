@@ -82,7 +82,7 @@ body {
 	min-width: 100%;
 	justify-content: space-evenly;
 	position: absolute;
-	bottom: 120px;
+	bottom: 12.5vh;
 	z-index: 1;
 	background-color: #151515; /* Black*/
 	flex-direction: column;

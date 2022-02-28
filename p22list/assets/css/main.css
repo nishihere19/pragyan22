@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 html,
 body {
 	box-sizing: border-box;
@@ -5,6 +7,7 @@ body {
 	min-height: 100vh;
 	overflow: auto;
 	overflow-x: hidden;
+	font-family: "Poppins";
 }
 
 #logo {
@@ -29,19 +32,21 @@ body {
 	background-size: cover;
 }
 
-::-webkit-scrollbar {
-	width: 10px;
-}
-::-webkit-scrollbar-track {
-	background: rgba(162, 123, 247, 0.2);
-	border-radius: 10px;
-	width: 10px;
-}
-::-webkit-scrollbar-thumb {
-	background: #d7c5ff;
-	border-radius: 10px;
-	-webkit-height: 10px;
+*::-webkit-scrollbar {
 	height: 10px;
+	width: 10px;
+	transform: translate(-15px, 20px);
+}
+*::-webkit-scrollbar-track {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 20px;
+}
+*::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(255, 255, 255, 0.4);
 }
 
 .header {
@@ -78,7 +83,7 @@ body {
 } */
 
 .content {
-	text-align: center;
+	/* text-align: center; */
 	/* justify-content: space-between; */
 	/* align-items: center; */
 	margin-bottom: 5vh;
@@ -86,8 +91,12 @@ body {
 }
 
 .content a {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+.content .cluster-list a{
 	text-decoration: none;
-  color: #ffffff;
 }
 
 .cluster-list > div {
@@ -100,7 +109,7 @@ body {
 
 .cluster-list {
 	display: flex;
-  align-items: center;
+  	align-items: center;
 	flex-direction: column;
 	width: 100%;
 	text-align: center;
@@ -110,7 +119,6 @@ body {
 	overflow-x: hidden;
 	height: 60vh;
 	direction: rtl;
-	font-family: Poppins;
 	font-style: normal;
 	font-weight: 600;
 	font-size: 24px;
@@ -144,6 +152,12 @@ body {
 	padding-left: 5%;
 	width: 60vw;
 	height: 60vh;
+}
+
+.cluster-data {
+	color: white;
+	max-width: 80%;
+	margin: 4rem auto;
 }
 
 @media only screen and (max-device-width: 768px) {
@@ -194,11 +208,12 @@ body {
 }
 
 .event-title {
-	font-family: Poppins;
 	font-style: normal;
 	font-weight: 600;
 	font-size: 64px;
 	line-height: 96px;
-
+	width: fit-content;
+	margin: auto;
 	color: #ffffff;
+	text-transform: uppercase;
 }

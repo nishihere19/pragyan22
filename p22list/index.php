@@ -46,6 +46,9 @@ if(!defined('__PRAGYAN_CMS'))
         #menu-bar {
             display: none;
         }
+        #injection {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -62,10 +65,20 @@ if(!defined('__PRAGYAN_CMS'))
         <!-- <h1 class="event-title">EVENTS</h1> -->
     </div>
     <div id="menu-bar"><?php echo $MENUBAR;?></div>
+    <div id="injection">
+        <?php
+            $string = explode('/', $TEMPLATECODEPATH);
+            array_pop($string);
+            $string = implode('/', $string);
+            $responseHelpers = $string."/common/response/index.php";
+            require_once $responseHelpers;
+        ?>
+    </div>
     <div class="content">
         <div class="menu-modal">
     <h1 class="event-title">EVENTS</h1>
         <div class="cluster-list"></div>
+        <div class="cluster-data"></div>
         </div>
     </div>
     <?php
